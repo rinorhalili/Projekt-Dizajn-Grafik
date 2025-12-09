@@ -3,528 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TechStore - Premium Electronics & Gadgets</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="Style.css">
 
-    <style>
-
-body {
-    margin: 0;
-    font-family: Inter, bold, sans-serif;
-    background: #c2cde9; 
-    color: #e6eef8;
-    padding-top: 70px; 
-}
-
-button:hover{
-    transform: translateY(1px);
-}
-a:hover{
-    transform: translateY(1px);
-}
-
-/* NAVBARI */
-.navbar {
-    
-    position: fixed;
-    inset: 0;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 0 28px;
-    background-color: #200b38;
-    opacity: 0.95;   
-    z-index: 1000;
-}
-.navbar:hover{
-    opacity:1;
-}
-
-.logo{
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    color: #fff;
-    font-size: 20px;
-    margin-left: 60px;
-}
-
-
-
-.nav-links{
-    display: flex;
-    gap: 25px;
-    align-items: center;
-}
-
-.nav-links a{
-    color: rgba(230,238,248,0.9);
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 700;
-    padding: 6px 8px;
-    border-radius: 6px;
-}
-
-.nav-links a:hover{
-    color: white;
-    background: rgba(255,255,255,0.03);
-}
-
-.search{
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(255,255,255,0.03);
-    padding: 6px 8px;
-    border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.04);
-}
-
-.search input{
-    background: transparent;
-    border: none;
-    outline: none;
-    color:white;
-    width: 220px;
-    font-size: 14px;
-}
-
-.search button{
-   background: transparent;
-    border: none;
-    padding: 7px 10px;
-    border-radius: 8px;
-    cursor: pointer;
-    color: white;
-   font-size: 15px;
-}
-
-
-.icons{
-     display:flex;
-      gap:14px; 
-      align-items:center;
-    
-    }
-.icon-btn{
-     background:rgb(5, 5, 49);
-      padding:8px; border-radius:8px;
-       cursor:pointer;
-        border:none;
-         font-size:16px;
-          color:#e6eef8;
-        
-        }
-
-@media (max-width:900px){
-    .nav-links{ display:none; }
-    .search input{ width:140px; }
-}
-
-
-/* BANNERI */
-.hero{
-    position:relative;
-    height: 500px;
-    overflow:hidden;
-    display:block;
-}
-.hero-img{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit: cover;
-    display:block;
-}
-.hero .overlay
-{
-    position:absolute;
-    inset:0;
-    background:rgba(13, 2, 43, 0.45);
-}
-.hero .inner{
-    position:relative;
-    padding:48px;
-    max-width:1100px;
-    margin-left:36px;
-    color:#fff;
-    margin-top: 100px;
-}
-.hero h1{
-    margin:0 0 10px;
-    font-size:34px
-}
-.hero p{
-    margin:0 0 16px;
-    color:#d1dbe8; 
-    font-size:18px;
-    line-height:1.4;
-    max-width:740px;
-}
-.cta{
-    display:inline-block;
-    padding:15px 20px;
-    background:#280e46;
-    margin-left: 100px;
-    margin-top:12px;
-    color:#ffffff;;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:700;
-    border-color:#200b38;;
-    border-style: solid;
-    border-width: 1px;
-    opacity: 0.95;
-}
-
-.cta:hover {
-    background:#200b38;
-    
-}
-.container{
-    margin-top: 50px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
-    padding:28px;
-    justify-content:center;
-}
-.card{
-    padding:16px;
-    border-radius:12px;
-    max-width:300px;
-   border: #48266e solid 1px;
-   align-items: center;
-   justify-content: center;
-}
-.card:hover{
-    transform: translateY(1px);
-     box-shadow:0 5px 5px #8147c4 ;
-}
-.card-img{
-    width:100%;
-    height:160px;
-    object-fit:cover;
-    border-radius:8px;
-    margin-bottom:12px;
-}
-
-.card h2{
-    margin:0 0 8px;
-    font-size:18px;
-    color:white;
-}
-.price{
-   color: white;
-    font-weight:800;
-    margin:6px 0;
-}
-.card p{
-    margin:0 0 12px;
-    color:#000000;
-    font-size:14px;
-    line-height:1.4;
-}
-.card .card-cta{
-    display:inline-block;
-    padding:8px 12px;
-    border-radius:8px;
-    background:transparent;
-    color:white;
-    border:1px solid #e6eef8;
-    text-decoration:none;
-    cursor:pointer;
-    margin-right:8px;
-}
-.card-cta:hover{
-   transform: translateY(1px);
-}
-
-.add-btn{
-    display:inline-block;
-    padding:8px 12px;
-    border-radius:8px;
-    background:transparent;
-    color:white;
-    border:1px solid #e6eef8;
-    text-decoration:none;
-    cursor:pointer;
-}
-.add-btn:hover{
-   transform: translateY(1px);
-}
-
-@media(max-width:640px){
-    .card .card-img{
-        height:140px
-    }
-}
-
-/* menu per mobile */
-.nav-links.show-nav {
-    display: flex !important;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background: #200b38;
-    padding: 20px;
-    width: 200px;
-    gap: 15px;
-    border-radius: 0 0 0 10px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
-}
-
-/* menu background */
-body.nav-open::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
-    z-index: 900;
-}
-
-/* glow */
-.card {
-    transform: translateY(0);
-    transition: 0.25s ease;
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(6px);
-}
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.45);
-}
-
-/* me bo fade */
-.card {
-    opacity: 0;
-    transform: translateY(25px);
-}
-.card.show {
-    opacity: 1;
-    transform: translateY(0);
-    transition: 0.6s ease;
-}
-
-
-
-    </style>
 </head>
 <body>
     <nav class="navbar" aria-label="Main navigation">
-       
-            <div class="logo">TechStore</div>   
-        
-
-        <div class="nav-links" role="menubar" aria-label="Primary links">
-            <a href="#home" role="menuitem">Home</a>
-            <a href="#products" role="menuitem">Products</a>
-            <a href="#categories" role="menuitem">Categories</a>
-            <a href="#contact" role="menuitem">Contact</a>
+        <div class="logo">
+            <i class="fas fa-laptop-code" style="margin-right: 10px;"></i>TechStore
+        </div>   
+        <div class="nav-links">
+            <a href="#" class="active"><i class="fas fa-home"></i> Home</a>
+            <a href="#"><i class="fas fa-box"></i> Products</a>
+            <a href="#"><i class="fas fa-list"></i> Categories</a>
+            <a href="#"><i class="fas fa-info-circle"></i> About</a>
+            <a href="#"><i class="fas fa-envelope"></i> Contact</a>
         </div>
-
-        <div style="display:flex;align-items:center;gap:12px;">
-            <form class="search" role="search" aria-label="Site search">
-                <input name="query" type="search" placeholder="Search products" aria-label="Search">
-                <button type="submit" aria-label="Submit search">🔍︎</button>
-            </form>
-
-            <div class="icons">
-                <button class="icon-btn" aria-label="Cart">🛒</button>
-                <button class="icon-btn" aria-label="Account">👤</button>
-            </div>
+        <div class="search">
+            <input type="text" placeholder="Search products...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="icons">
+            <button class="icon-btn" title="Account"><i class="fas fa-user"></i></button>
+            <button class="icon-btn" title="Wishlist"><i class="fas fa-heart"></i></button>
+            <button class="icon-btn" title="Cart"><i class="fas fa-shopping-cart"></i></button>
         </div>
     </nav>
 
-
-    <div class="hero">
-        <img class="hero-img" src="banner_headphones.webp" alt="Top selling tech">
+    <header class="hero">
+        <img src="hero.avif" alt="Tech Products" class="hero-img">
         <div class="overlay"></div>
         <div class="inner">
-            <h1>Our top selling tech products</h1>
-            <p>Check out our most popular gadgets — quality and value, hand-picked for you.</p>
-            <a class="cta" href="#products">Shop now!</a>
+            <h1>Welcome to TechStore</h1>
+            <p>Discover the latest in technology with our curated selection of premium gadgets and electronics. Quality products at competitive prices.</p>
+            <a href="#featured" class="cta">Shop Now <i class="fas fa-arrow-right"></i></a>
         </div>
-    </div>
+    </header>
 
-    <div class="container">
-        <article class="card">
-            <img class="card-img" src="gaminglaptop.jpg" alt="Noise-Cancelling Headphones">
-            <h2>Noise-Cancelling Headphones</h2>
-            <div class="price">$129</div>
-            <p>Immersive sound, long battery life and comfortable fit — customers' favorite.</p>
-            <a class="card-cta" href="#product-headphones">Details</a>
-            <button class="add-btn" type="button">Add to list</button>
-        </article>
+    <!-- Featured Categories -->
+    <section class="categories">
+        <h2>Categories</h2>
+        <div class="category-grid">
+            <a href="#" class="category-card">
+                <i class="fas fa-laptop"></i>
+                <span>Laptops</span>
+            </a>
+            <a href="#" class="category-card">
+                <i class="fas fa-mobile-alt"></i>
+                <span>Phones</span>
+            </a>
+            <a href="#" class="category-card">
+                <i class="fas fa-headphones"></i>
+                <span>Audio</span>
+            </a>
+            <a href="#" class="category-card">
+                <i class="fas fa-gamepad"></i>
+                <span>Gaming</span>
+            </a>
+            <a href="#" class="category-card">
+                <i class="fas fa-mobile-alt"></i>
+                <span>Tablets</span>
+            </a>
+            <a href="#" class="category-card">
+                <i class="fas fa-tv"></i>
+                <span>TV & Home</span>
+            </a>
+        </div>
+    </section>
 
-        <article class="card">
-            <img class="card-img" src="gaminglaptop.jpg" alt="Compact Gaming Laptop">
-            <h2>Gaming Laptop</h2>
-            <div class="price">$1299</div>
-            <p>Thin chassis, powerful GPU and optimized thermals for sustained performance.</p>
-            <a class="card-cta" href="#product-laptop">Details</a>
-            <button class="add-btn" type="button">Add to list</button>
-        </article>
 
-        <article class="card">
-            <img class="card-img" src="gaminglaptop.jpg" alt="Smart Home Camera">
-            <h2> Gaming Mouse</h2>
-            <div class="price">$89</div>
-            <p>Clear night vision and secure remote access — keep your home protected.</p>
-            <a class="card-cta" href="#product-camera">Details</a>
-            <button class="add-btn" type="button">Add to list</button>
-        </article>
 
-        <article class="card">
-            <img class="card-img" src="gaminglaptop.jpg" alt="Wireless Charger">
-            <h2>Wireless Charger</h2>
-            <div class="price">$29</div>
-            <p>Fast charging pad compatible with most phones and cases.</p>
-            <a class="card-cta" href="#product-charger">Details</a>
-            <button class="add-btn" type="button">Add to list</button>
-        </article>
-
-        <article class="card">
-            <img class="card-img" src="gaminglaptop.jpg" alt="Bluetooth Speaker">
-            <h2>Bluetooth Speaker</h2>
-            <div class="price">$59</div>
-            <p>Compact and powerful audio with IPX5 water resistance.</p>
-            <a class="card-cta" href="#product-speaker">Details</a>
-            <button class="add-btn" type="button">Add to list</button>
-        </article>
-
-        <article class="card">
-            <img class="card-img" src="gaminglaptop.jpg" alt="Smartwatch">
-            <h2>Smartwatch</h2>
-            <div class="price">$199</div>
-            <p>Health tracking, notifications and long battery life in a sleek body.</p>
-            <a class="card-cta" href="#product-watch">Details</a>
-            <button class="add-btn" type="button">Add to list</button>
-        </article>
-
-             <article class="card">
-            <img class="card-img" src="gaminglaptop.jpg" alt="Smartwatch">
-            <h2>Smartwatch</h2>
-            <div class="price">$199</div>
-            <p>Health tracking, notifications and long battery life in a sleek body.</p>
-            <a class="card-cta" href="#product-watch">Details</a>
-            <button class="add-btn" type="button">Add to list</button>
-        </article>
-
-             <article class="card">
-            <img class="card-img" src="gaminglaptop.jpg" alt="Smartwatch">
-            <h2>Smartwatch</h2>
-            <div class="price">$199</div>
-            <p>Health tracking, notifications and long battery life in a sleek body.</p>
-            <a class="card-cta" href="#product-watch">Details</a>
-            <button class="add-btn" type="button">Add to list</button>
-        </article>
-
-             <article class="card">
-            <img class="card-img" src="gaminglaptop.jpg" alt="Smartwatch">
-            <h2>Smartwatch</h2>
-            <div class="price">$199</div>
-            <p>Health tracking, notifications and long battery life in a sleek body.</p>
-            <a class="card-cta" href="#product-watch">Details</a>
-            <button class="add-btn" type="button">Add to list</button>
-        </article>
-
-             <article class="card">
-            <img class="card-img" src="gaminglaptop.jpg" alt="Smartwatch">
-            <h2>Smartwatch</h2> 
-            <div class="price">$199</div>
-            <p>Health tracking, notifications and long battery life in a sleek body.</p>
-            <a class="card-cta" href="#product-watch">Details</a>
-            <button class="add-btn" type="button">Add to list</button>
-        </article>
-    </div>
+    <!-- PRODUKTET -->
+    <section class="featured-products">
+        <div class="section-header">
+            <h2 style="text-align: center; font-size: 35px; margin-bottom: 30px;">Trending Now</h2>
+            
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-badge">New</div>
+                <div class="product-img-container">
+                    <img src="watch.avif" alt="Smart Watch" class="product-img">
+                </div>
+                <div class="product-details">
+                    <span class="product-category">Wearables</span>
+                    <h3>Smart Watch Pro</h3>
+                    <div class="product-footer">
+                        <span class="price">$299.99</span>
+                        <button class="btn-add"><i class="fas fa-cart-plus"></i> Add Item</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+               <div class="product-badge">New</div>
+                <div class="product-img-container">
+                    <img src="watch.avif" alt="Smart Watch" class="product-img">
+                </div>
+                <div class="product-details">
+                    <span class="product-category">Wearables</span>
+                    <h3>Smart Watch Pro</h3>
+                    <div class="product-footer">
+                        <span class="price">$299.99</span>
+                        <button class="btn-add"><i class="fas fa-cart-plus"></i> Add Item</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                
+                <div class="product-img-container">
+                    <img src="watch.avif" alt="Smart Watch" class="product-img">
+                </div>
+                <div class="product-details">
+                    <span class="product-category">Wearables</span>
+                    <h3>Smart Watch Pro</h3>
+                    <div class="product-footer">
+                        <span class="price">$299.99</span>
+                        <button class="btn-add"><i class="fas fa-cart-plus"></i> Add Item</button>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="product-card">
+                
+                <div class="product-img-container">
+                    <img src="watch.avif" alt="Smart Watch" class="product-img">
+                </div>
+                <div class="product-details">
+                    <span class="product-category">Wearables</span>
+                    <h3>Smart Watch Pro</h3>
+                    <div class="product-footer">
+                        <span class="price">$299.99</span>
+                        <button class="btn-add"><i class="fas fa-cart-plus"></i> Add Item</button>
+                    </div>
+                </div>
+            </div><div class="product-card">
+                
+                <div class="product-img-container">
+                    <img src="watch.avif" alt="Smart Watch" class="product-img">
+                </div>
+                <div class="product-details">
+                    <span class="product-category">Wearables</span>
+                    <h3>Smart Watch Pro</h3>
+                    <div class="product-footer">
+                        <span class="price">$299.99</span>
+                        <button class="btn-add"><i class="fas fa-cart-plus"></i> Add Item</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+               
+                <div class="product-img-container">
+                    <img src="watch.avif" alt="Smart Watch" class="product-img">
+                </div>
+                <div class="product-details">
+                    <span class="product-category">Wearables</span>
+                    <h3>Smart Watch Pro</h3>
+                    <div class="product-footer">
+                        <span class="price">$299.99</span>
+                        <button class="btn-add"><i class="fas fa-cart-plus"></i> Add Item</button>
+                    </div>
+                </div>
+            </div>
+           <div class="product-card">
+               
+                <div class="product-img-container">
+                    <img src="watch.avif" alt="Smart Watch" class="product-img">
+                </div>
+                <div class="product-details">
+                    <span class="product-category">Wearables</span>
+                    <h3>Smart Watch Pro</h3>
+                    <div class="product-footer">
+                        <span class="price">$299.99</span>
+                        <button class="btn-add"><i class="fas fa-cart-plus"></i> Add Item</button>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </section>
 
     
 
     
-    <footer style="background:#200b38;color:#ffffff;padding:36px 18px;margin-top:28px;">
-        <div style="max-width:1100px;margin:0 auto;display:flex;gap:28px;flex-wrap:wrap;justify-content:space-between">
-            <div style="flex:1 1 220px">
-                <strong>TechStore</strong>
-                <p style="margin:8px 0 0;color:white">Quality gadgets, hand-picked for you.</p>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-laptop-code"></i>
+                <span>TechStore</span>
+            </div>
+            <p class="footer-about">Your trusted destination for the latest in technology and electronics. Quality products at competitive prices.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                
             </div>
 
-            <div style="flex:1 1 150px">
-                <strong>Shop</strong>
-                <ul style="list-style:none;padding:0;margin:8px 0 0;line-height:1.8">
-                    <li><a href="#products" style="color:inherit;text-decoration:none;">Products</a></li>
-                    <li><a href="#contact" style="color:inherit;text-decoration:none;">Contact</a></li>
-                    <li><a href="#categories" style="color:inherit;text-decoration:none;">Caregories</a></li>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Warranty</a></li>
                 </ul>
             </div>
 
-            <div style="flex:1 1 200px">    
-                <strong>Contact</strong>
-                <p style="margin:8px 0 0;opacity:.9">
-                    support@techstore.example<br>+123 456 890
-                </p>
-            </div>
-            <div class="d1">
-                <strong>Location</strong>
-                <p>📍️Prishtina</p>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <div class="contact-info">
+                    <p> 123 Tech Street, Prishtina 10000</p>
+                    <p> +383 49 123 456</p>
+                    <p> info@techstore.com</p>
+                </div>
             </div>
         </div>
+
+        <div class="footer-bottom">
+            <p> 2025 TechStore. All rights reserved.</p>
+            
+        </div>
     </footer>
-    <script>
-// smooth scroll
-document.querySelectorAll('.nav-links a, .cta').forEach(link => {
-    link.addEventListener('click', function (e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            e.preventDefault();
-            window.scrollTo({
-                top: target.offsetTop - 60,
-                behavior: "smooth"
-            });
-        }
-    });
-});
+   
+  
 
-let cartCount = 0;
-const cartBtn = document.querySelector('[aria-label="Cart"]');
-
-document.querySelectorAll('.add-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        cartCount++;
-        cartBtn.textContent = `🛒 (${cartCount})`;
-    });
-});
-
-// mobile menu toggle
-const navLinks = document.querySelector('.nav-links');
-const mobileMenuBtn = document.createElement("button");
-mobileMenuBtn.textContent = "☰";
-mobileMenuBtn.classList.add("icon-btn");
-mobileMenuBtn.setAttribute("aria-label", "Toggle menu");
-
-document.querySelector('.navbar').insertBefore(mobileMenuBtn, document.querySelector('.logo').nextSibling);
-
-mobileMenuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("show-nav");
-    document.body.classList.toggle("nav-open");
-});
-
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
-    });
-}, { threshold: 0.2 });
-
-document.querySelectorAll(".card").forEach(card => {
-    observer.observe(card);
-});
-</script>
+    
 
 </body>
 </html>
