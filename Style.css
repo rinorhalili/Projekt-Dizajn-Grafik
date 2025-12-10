@@ -142,7 +142,7 @@ a:hover{
 
 .hero {
     position: relative;
-    height: 600px;
+    height: 850px;
     overflow: hidden;
     margin-bottom: 40px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -160,7 +160,8 @@ a:hover{
 {
     position:absolute;
     inset:0;
-    background:rgba(13, 2, 43, 0.45);
+    background:var(--text-dark);
+    opacity:0.4;
 }
 .hero .inner {
     position: relative;
@@ -175,7 +176,7 @@ a:hover{
     text-align: center;
 }
 .hero h1 {
-    margin: 0 0 15px;
+    margin: 0 auto 15px;
     font-size: 2.5rem;
     font-weight: 800;
     text-shadow: 0 2px 4px rgba(0,0,0,0.3);
@@ -208,6 +209,11 @@ a:hover{
     background:#200b38;
     
 }
+
+
+
+
+
 .container{
     margin-top: 50px;
     display:flex;
